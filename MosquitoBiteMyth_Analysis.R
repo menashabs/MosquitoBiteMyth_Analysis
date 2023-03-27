@@ -6,7 +6,7 @@ library(tidyverse)
 library(readxl)
 library(gmodels)
 
-data <- read_xlsx("MythAnalysis_Dataset.xlsx")
+data <- read_xlsx("MosquitoBiteMyth_Dataset.xlsx")
 data
 
 nrow(data) #18302
@@ -242,5 +242,3 @@ library(ggplot2)
 ggplot(model.data, aes(index, .std.resid))+geom_point(aes(color=data_used$Response), alpha=0.5)+theme_bw()
 model.data %>% filter(abs(.std.resid)>3)
 
-
-?glm
