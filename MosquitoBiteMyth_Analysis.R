@@ -2,10 +2,12 @@
 ###############################################################
 # Project - MythAnalysis
 
+# loading the needed libraries
 library(tidyverse)
 library(readxl)
 library(gmodels)
 
+# data
 data <- read_xlsx("MosquitoBiteMyth_Dataset.xlsx")
 data
 
@@ -14,6 +16,7 @@ ncol(data) #18
 
 summary(data)
 
+# analysis
 data_1 <- filter(data, Y %in% c(1,2))
 data_1
 
@@ -241,4 +244,6 @@ model.data %>% top_n(3, .cooksd)
 library(ggplot2)
 ggplot(model.data, aes(index, .std.resid))+geom_point(aes(color=data_used$Response), alpha=0.5)+theme_bw()
 model.data %>% filter(abs(.std.resid)>3)
+
+
 
