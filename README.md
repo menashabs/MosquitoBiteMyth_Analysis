@@ -1,5 +1,3 @@
-# MythAnalysis_LogisticRegression
+# MosquitoBiteMyth_Analysis
 
-Under this project, a myth about mosquito bites and HIV is analysed
-
-Main statistical technique used is Logistic Regression 
+Under this project, a myth about mosquito bites and HIV was analysed
